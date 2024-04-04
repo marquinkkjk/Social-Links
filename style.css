@@ -1,0 +1,140 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;  
+}
+
+:root {
+  --text-color: white;
+  --bg-url: linear-gradient(#0F2027, #203A43, #2c5364);
+  --border: 1px solid gray;
+  --switch-bg: #fff url(assets/moon-stars.svg) no-repeat center;
+  --links-bg: rgba(255, 255, 255, 0.1);
+  --button-hover: 1px solid white;
+  --bg-hover: rgba(255, 255, 255, 0.5);
+}
+
+.light {
+  --text-color: black;
+  --bg-url: url(./assets/bg-desktop-light.jpg);
+  --border: 1px solid #a8aab3;
+  --switch-bg: #fff url(assets/sun.svg) no-repeat center;
+  --links-bg: rgba(0, 0, 0, 0.1);
+  --button-hover: 1px solid #000;
+  --bg-hover: rgba(0, 0, 0, 0.2);
+}
+
+body {
+  background-image: var(--bg-url);
+}
+
+body * {
+    font-family: 'Inter', sans-serif;
+    color: var(--text-color);
+}
+
+#container {
+    width: 588px;
+    height: 712px;
+    margin: 56px auto 0;
+}
+
+#profile {
+    text-align: center;
+}
+
+#profile img {
+  width: 112px;
+}
+
+#profile p {
+    font-weight: 500;
+    line-height: 24px;
+    margin-bottom: 20px;
+}
+
+#switch {
+ width: 65px;
+ position: relative;
+ margin: 4px auto;
+ 
+}
+
+#switch button {
+  width: 32px;
+  height: 32px;
+  background: var(--switch-bg);
+  border: 0;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#switch span {
+  display: block;
+  height: 24px;
+  width: 64px;
+  background: var(--links-bg);
+  border: var(--border);
+  border-radius: 9999px;
+}
+
+.light #switch button {
+  right: 0;
+  left: initial;
+}
+
+#links {
+  display: flex;
+  justify-content: center;
+}
+
+#links ul{
+  gap: 16px;
+  padding: 15px 120px;
+  margin-top: 40px;
+  border: var(--border);
+  border-radius: 5px;
+  background: var(--links-bg);
+  transition: background 0.2s;
+}
+
+#links li :hover {
+  border: var(--button-hover);
+  background: var(--bg-hover);
+}
+
+#links ul :hover {
+  border: none;
+  background: none; 
+}
+
+li{
+  list-style: none;
+}
+
+a {
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+}
+
+#sociallinks {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  font-size: 25px;
+  gap: 15px;
+  align-items: center;
+}
+
+#sociallinks a {
+  padding: 16px;
+}
+
+#sociallinks a:hover {
+  background: var(--links-bg);
+  border-radius: 50%;
+}
