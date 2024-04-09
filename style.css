@@ -30,19 +30,19 @@ body {
 }
 
 body * {
-    font-family: 'Inter', sans-serif;
-    color: var(--text-color);
+  font-family: 'Inter', sans-serif;
+  color: var(--text-color);
 }
 
 #container {
-    width: 100%;
-    max-width: 588px;
-    height: 712px;
-    margin: 56px auto 0;
+  width: 100%;
+  max-width: 588px;
+  height: 712px;
+  margin: 56px auto 0;
 }
 
 #profile {
-    text-align: center;
+  text-align: center;
 }
 
 #profile img {
@@ -50,17 +50,16 @@ body * {
 }
 
 #profile p {
-    font-weight: 500;
-    line-height: 24px;
-    margin-bottom: 20px;
+  font-weight: 500;
+  line-height: 24px;
+  margin-bottom: 20px;
 }
 
 #switch {
- width: 65px;
- position: relative;
- margin: 4px auto;
- 
-}
+  width: 65px;
+  position: relative;
+  margin: 4px auto;
+ }
 
 #switch button {
   width: 32px;
@@ -72,6 +71,11 @@ body * {
   left: 0;
   top: 50%;
   transform: translateY(-50%);
+  animation: slide-back 0.3s;
+}
+
+#switch button :hover {
+  outline: 8px solid var(--bg-hover);
 }
 
 #switch span {
@@ -84,8 +88,7 @@ body * {
 }
 
 .light #switch button {
-  right: 0;
-  left: initial;
+  animation: slide-in 0.3s forwards;
 }
 
 #links {
@@ -139,4 +142,24 @@ a {
 #sociallinks a:hover {
   background: var(--links-bg);
   border-radius: 50%;
+}
+
+@keyframes slide-in {
+  from {
+    left: 0;
+  }
+
+  to {
+    left: 50%;
+  }
+}
+
+@keyframes slide-back {
+  from {
+    left: 50%;
+  }
+
+  to {
+    left: 0;
+  }
 }
