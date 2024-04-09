@@ -74,8 +74,8 @@ body * {
   animation: slide-back 0.3s;
 }
 
-#switch button :hover {
-  outline: 8px solid var(--bg-hover);
+#switch button:hover {
+  outline: 8px solid var(--links-bg);
 }
 
 #switch span {
